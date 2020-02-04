@@ -278,7 +278,7 @@ hid_interfaces = [
 midi_in_jack_emb = midi.InJackDescriptor(
     description="MIDI PC -> {}".format(args.interface_name),
     bJackType=midi.JACK_TYPE_EMBEDDED,
-    iJack=StringIndex.index("{} usb_midi.ports[0]".format(args.interface_name)))
+    iJack=StringIndex.index("{}".format(args.interface_name)))
 midi_out_jack_ext = midi.OutJackDescriptor(
                     description="MIDI data out to user code.",
                     bJackType=midi.JACK_TYPE_EXTERNAL,
@@ -294,7 +294,7 @@ midi_out_jack_emb = midi.OutJackDescriptor(
     description="MIDI PC <- {}".format(args.interface_name),
     bJackType=midi.JACK_TYPE_EMBEDDED,
     input_pins=[(midi_in_jack_ext, 1)],
-    iJack=StringIndex.index("{} usb_midi.ports[1]".format(args.interface_name)))
+    iJack=StringIndex.index("{}".format(args.interface_name)))
 
 
 audio_midi_interface = standard.InterfaceDescriptor(
