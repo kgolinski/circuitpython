@@ -27,7 +27,6 @@
 #include "background.h"
 
 //#include "audio_dma.h"
-#include "tick.h"
 #include "supervisor/filesystem.h"
 #include "supervisor/shared/tick.h"
 #include "supervisor/usb.h"
@@ -37,9 +36,8 @@
 #include "supervisor/linker.h"
 #include "supervisor/shared/stack.h"
 
-// TODO
 #ifdef CIRCUITPY_DISPLAYIO
-//#include "shared-module/displayio/__init__.h"
+#include "shared-module/displayio/__init__.h"
 #endif
 
 volatile uint64_t last_finished_tick = 0;
